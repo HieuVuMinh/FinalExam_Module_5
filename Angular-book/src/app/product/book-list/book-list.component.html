@@ -1,0 +1,39 @@
+<h1 class="mt-4" style="text-align: center">Book List</h1>
+<td>
+  <button style="margin-bottom: 20px" routerLink="create" type="button" class="btn btn-primary">Create</button>
+</td>
+<div class="card mb-4">
+  <div class="card-header">
+    <i class="fas fa-table me-1"></i>
+    Data Book
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Description</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let book of bookList">
+        <td>{{book.id}}</td>
+        <td><a routerLink="view/{{book.id}}">{{book.title}}</a></td>
+        <td>{{book.author}}</td>
+        <td>{{book.description}}</td>
+        <td>
+          <button routerLink="edit/{{book.id}}" type="button" class="btn btn-warning">Edit</button>
+        </td>
+        <td>
+          <button (click)="deleteBook(book.id)" type="buttdangeron" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

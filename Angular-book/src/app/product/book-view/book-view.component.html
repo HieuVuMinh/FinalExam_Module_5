@@ -1,0 +1,40 @@
+<h1 style="text-align: center; margin-bottom: 40px" class="mt-4">Edit Book</h1>
+
+<form novalidate class="row justify-content-md-center"
+      [formGroup]="bookForm">
+  <div class="col-md-8">
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">
+        Title:
+      </label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="example-text-input"
+               formControlName="title">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="example-email-input" class="col-2 col-form-label">
+        Author:
+      </label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="example-email-input" formControlName="author">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-url-fb" class="col-2 col-form-label">
+        Description:
+      </label>
+      <div class="col-10">
+        <textarea class="form-control" type="text" id="example-url-fb" formControlName="description"></textarea>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div style="margin-left: 155px" class="col-10">
+        <button routerLink="/" type="button" class="btn btn-primary">Back</button>
+      </div>
+    </div>
+  </div>
+
+</form>
+
